@@ -93,7 +93,7 @@ export function Hero() {
               {/* Image container */}
               <div className="absolute inset-2 rounded-full overflow-hidden border-2 border-border">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/profile-pic2.png"
                   alt="Siddhesh Sanjay Patil"
                   fill
                   className="object-cover"

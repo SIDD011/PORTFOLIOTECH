@@ -14,7 +14,7 @@ const projects = [
     featured: true,
     badge: "IEEE Published",
     color: "from-emerald-500/20 to-cyan-500/20",
-    github:"https://github.com/SIDD011/Slipper-Zero.git"
+    github: "https://github.com/SIDD011/Slipper-Zero.git",
   },
   {
     title: "Especially Safe",
@@ -24,7 +24,7 @@ const projects = [
     technologies: ["ESP32", "TLS", "WPA3", "IoT Security"],
     icon: Shield,
     color: "from-blue-500/20 to-indigo-500/20",
-    github:"https://github.com/SIDD011/Especially-Safe.git"
+    github: "https://github.com/SIDD011/Especially-Safe.git",
   },
   {
     title: "Privacy Pi",
@@ -34,24 +34,25 @@ const projects = [
     technologies: ["Raspberry Pi", "Linux", "OpenVPN", "WireGuard", "Pi-hole"],
     icon: Server,
     color: "from-purple-500/20 to-pink-500/20",
-    github:"https://github.com/SIDD011/Privacy-Pi.git"
+    github: "https://github.com/SIDD011/Privacy-Pi.git",
   },
   {
     title: "CableScope",
     subtitle: "AI-Powered TDR Fault Detection System",
     description:
-      " CableScope is a precision diagnostic system that detects cable faults using Time Domain Reflectometry (TDR), combining STM32 high-speed signal acquisition with Raspberry Pi 5 processing for real-time analysis and centimeter-level fault localization.",
-    technologies: ["  STM32", "Raspberry Pi 5", "Python", "AI/ML", "TDR"],
+      "CableScope is a precision diagnostic system that detects cable faults using Time Domain Reflectometry (TDR), combining STM32 high-speed signal acquisition with Raspberry Pi 5 processing for real-time analysis and centimeter-level fault localization.",
+    technologies: ["STM32", "Raspberry Pi 5", "Python", "AI/ML", "TDR"],
     icon: Globe,
     color: "from-orange-500/20 to-red-500/20",
-    github:"https://github.com/SIDD011/CableScope.git"
-  }
+    github: "https://github.com/SIDD011/CableScope.git",
+  },
 ]
 
 export function Projects() {
   return (
     <section id="projects" className="py-24 px-6 lg:px-20 relative">
       <div className="max-w-6xl mx-auto">
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -75,6 +76,7 @@ export function Projects() {
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const IconComponent = project.icon
+
             return (
               <motion.div
                 key={project.title}
@@ -90,8 +92,10 @@ export function Projects() {
                 }`}
               >
                 {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+
                 {/* Featured badge */}
                 {project.badge && (
                   <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
@@ -101,18 +105,26 @@ export function Projects() {
                 )}
 
                 <div className="relative p-6 md:p-8">
-                  {/* Icon and title */}
+
+                  {/* Icon & Title */}
                   <div className="flex items-start gap-4 mb-4">
-                    <div className={`p-3 rounded-xl transition-all duration-300 ${
-                      project.featured ? "bg-primary/20" : "bg-secondary group-hover:bg-primary/20"
-                    }`}>
+                    <div
+                      className={`p-3 rounded-xl transition-all duration-300 ${
+                        project.featured
+                          ? "bg-primary/20"
+                          : "bg-secondary group-hover:bg-primary/20"
+                      }`}
+                    >
                       <IconComponent className="w-6 h-6 text-primary" />
                     </div>
+
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{project.subtitle}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {project.subtitle}
+                      </p>
                     </div>
                   </div>
 
@@ -133,8 +145,10 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {/* Action buttons */}
+                  {/* Buttons */}
                   <div className="flex items-center gap-3 pt-4 border-t border-border">
+
+                    {/* View Details (future demo link) */}
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -143,15 +157,25 @@ export function Projects() {
                       <ExternalLink className="w-4 h-4" />
                       View Details
                     </motion.button>
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center gap-2 px-4 py-2 bg-secondary text-muted-foreground rounded-lg text-sm font-medium hover:bg-secondary/80 hover:text-foreground transition-all"
+
+                    {/* GitHub Source */}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Github className="w-4 h-4" />
-                      Source
-                    </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center gap-2 px-4 py-2 bg-secondary text-muted-foreground rounded-lg text-sm font-medium hover:bg-secondary/80 hover:text-foreground transition-all"
+                      >
+                        <Github className="w-4 h-4" />
+                        Source
+                      </motion.button>
+                    </a>
+
                   </div>
+
                 </div>
               </motion.div>
             )
