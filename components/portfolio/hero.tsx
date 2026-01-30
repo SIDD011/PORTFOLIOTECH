@@ -107,7 +107,7 @@ export function Hero() {
                 transition={{ delay: 0.8, type: "spring" }}
                 className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg shadow-purple-500/30"
               >
-                Open to Work
+                
               </motion.div>
             </div>
           </motion.div>
