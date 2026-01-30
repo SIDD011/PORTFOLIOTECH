@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const skillCategories = [
   {
     title: "Cloud & Security",
-    bg: "/images/cloud.jpg",
+    bg: "C:\\Users\\siddhesh1290\\OneDrive - Vishwaniketan Trust\\Desktop\\portfolio-website (1)\\public\\images\\profile.jpg",
     skills: [
       { name: "AWS (EC2, IAM, S3, VPC)", level: "Intermediate" },
       { name: "SSL/TLS", level: "Intermediate" },
