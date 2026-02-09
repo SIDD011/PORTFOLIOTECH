@@ -46,7 +46,7 @@ export function Hero() {
     { icon: Linkedin, href: "https://www.linkedin.com/in/siddhesh-patil-4b8a88262", label: "LinkedIn" },
     { icon: Shield, href: "https://tryhackme.com/p/psiddhesh1302", label: "TryHackMe" },
     { icon: Mail, href: "mailto:psiddhesh1302@gmail.com", label: "Email" },
-    { icon: FileText, href: "https://drive.google.com/file/d/1nEoDoYHXwla2awC9r_I4GAPxVjNYWrnK/view?usp=drive_link", label: "Resume" },
+    { icon: FileText, href: "/Resume.pdf", label: "Resume" },
   ]
 
   return (
